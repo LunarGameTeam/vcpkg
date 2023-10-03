@@ -4,12 +4,10 @@ endif()
 
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO microsoft/glTF-SDK
-    REF eaccf166e2718c6133db426545b6d008cb7ad79f # 28-06-2022
-    SHA512 112e31d2f42d2fb22060a687f7d33f22e677d8d7eca006eb8c1edef6a61b8bad637df15492665656ea88a5a0b980851eb978a180b4a01d307d1bbc92f63500f1
+    REPO LunarGameTeam/glTF-SDK
+    REF 863c0e822aa776586f4e991d819348904e336a4c # 28-06-2022
+    SHA512 e3aefa490bdf3983a2fa9e938805b140392ebd0bd40f6e2bbbe60509e4c521d9cd8c5e0f972b7197857694b313fac390ef46c1e1c4732c074365b5789dddf575
     HEAD_REF master
-    PATCHES
-        fix-install.patch
 )
 
 # note: Test/Sample executables won't be installed
