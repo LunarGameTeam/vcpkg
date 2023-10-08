@@ -5,8 +5,8 @@ endif()
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO LunarGameTeam/glTF-SDK
-    REF 863c0e822aa776586f4e991d819348904e336a4c # 28-06-2022
-    SHA512 e3aefa490bdf3983a2fa9e938805b140392ebd0bd40f6e2bbbe60509e4c521d9cd8c5e0f972b7197857694b313fac390ef46c1e1c4732c074365b5789dddf575
+    REF e8cc288df23a491a0d10d05e3614adb4f811c315 # 28-06-2022
+    SHA512 33d4cf297e209406101a40d979ef9e1818e9075d9ca9cbf0093444e49c16724550f2e893d17c4aa01e16001c51bc21e7704b25ac3c7b29238cf78ca019431fe5
     HEAD_REF master
 )
 
@@ -27,6 +27,7 @@ vcpkg_cmake_configure(
         ${FEATURE_OPTIONS}
 )
 vcpkg_cmake_install()
+vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/ms-gltf)
 vcpkg_copy_pdbs()
 
 if(VCPKG_LIBRARY_LINKAGE STREQUAL "static")
