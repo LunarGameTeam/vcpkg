@@ -5,8 +5,8 @@ endif()
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO LunarGameTeam/glTF-SDK
-    REF e8cc288df23a491a0d10d05e3614adb4f811c315 # 28-06-2022
-    SHA512 33d4cf297e209406101a40d979ef9e1818e9075d9ca9cbf0093444e49c16724550f2e893d17c4aa01e16001c51bc21e7704b25ac3c7b29238cf78ca019431fe5
+    REF c5e02f7748e8554fd3f6c0bbe07b37285166a5ff # 17-10-2023
+    SHA512 db55742b6b1a85f7a127552e9b2cbb022b657d36b53d17144374348ab8de86a723900ba054b15177bcb7ceb6dd8aa64ccd269e7af0db44ef4cfe5725bc8ed8e6
     HEAD_REF master
 )
 
@@ -28,6 +28,7 @@ vcpkg_cmake_configure(
 )
 vcpkg_cmake_install()
 vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/ms-gltf)
+vcpkg_fixup_pkgconfig()
 vcpkg_copy_pdbs()
 
 if(VCPKG_LIBRARY_LINKAGE STREQUAL "static")
@@ -36,3 +37,5 @@ endif()
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 
 vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE")
+
+file(INSTALL ${SOURCE_PATH}/LICENSE DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT} RENAME copyright)
