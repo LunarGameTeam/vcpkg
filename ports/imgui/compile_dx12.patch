@@ -1,0 +1,12 @@
+diff --git "a/backends/imgui_impl_dx12.cpp" "b/backends/imgui_impl_dx12.cpp"
+index 22261a1d..240c6221 100644
+--- "a/backends/imgui_impl_dx12.cpp"
++++ "b/backends/imgui_impl_dx12.cpp"
+@@ -54,6 +54,7 @@
+ #include <d3dcompiler.h>
+ #ifdef _MSC_VER
+ #pragma comment(lib, "d3dcompiler") // Automatically link with d3dcompiler.lib as we are using D3DCompile() below.
++#pragma comment(lib, "DXGI")
+ #endif
+ 
+ // DirectX data

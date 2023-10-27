@@ -1,4 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
+
+add_compile_definitions(IMGUI_EXPORT)
 project(imgui CXX)
 
 set(CMAKE_DEBUG_POSTFIX d)

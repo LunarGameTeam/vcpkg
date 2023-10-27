@@ -1,5 +1,5 @@
 vcpkg_check_linkage(ONLY_STATIC_LIBRARY)
-
+set(VCPKG_LIBRARY_LINKAGE dynamic)
 if ("docking-experimental" IN_LIST FEATURES)
     vcpkg_from_github(
        OUT_SOURCE_PATH SOURCE_PATH
@@ -7,6 +7,9 @@ if ("docking-experimental" IN_LIST FEATURES)
        REF 2a6d7b1eaa1851e5b53d8c7a361a8d54f5a9ae8c
        SHA512 219ee92b762e261e3ed76e8662c6918eda45d3c86dcea11eb92342be92cba95cc19fcc1ed75e97a3cb6643367daa09a2eb09d423718d78ea468bedbbf75af662
        HEAD_REF docking
+       PATCHES
+           compile_change.patch
+           compile_dx12.patch
        )
 else()
     vcpkg_from_github(
