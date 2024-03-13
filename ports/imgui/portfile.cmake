@@ -3,9 +3,9 @@ set(VCPKG_LIBRARY_LINKAGE dynamic)
 if ("docking-experimental" IN_LIST FEATURES)
     vcpkg_from_github(
        OUT_SOURCE_PATH SOURCE_PATH
-       REPO ocornut/imgui
-       REF 2a6d7b1eaa1851e5b53d8c7a361a8d54f5a9ae8c
-       SHA512 219ee92b762e261e3ed76e8662c6918eda45d3c86dcea11eb92342be92cba95cc19fcc1ed75e97a3cb6643367daa09a2eb09d423718d78ea468bedbbf75af662
+       REPO LunarGameTeam/imgui
+       REF 64affcc54253451cacb54776d5e8191adbd1d82e
+       SHA512 b747bccbebd1dfd726d4783910de95a1c47220cf3d78f97797e7a2935db3e49fc14d313df96fd006ca5aa032ab387ae97a3426d8068db1cc8bd5957733d5c4ac
        HEAD_REF docking
        PATCHES
            compile_change.patch
@@ -14,7 +14,7 @@ if ("docking-experimental" IN_LIST FEATURES)
 else()
     vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO ocornut/imgui
+    REPO LunarGameTeam/imgui
     REF v${VERSION}
     SHA512 42021b06b611b58222b09fab8db2c34e992c3dc4fbaa175e09833c66c90d04b4a4e7def16a732535335c0ac5ff014d235835511a5d9a76d32b4395b302146919
     HEAD_REF master
